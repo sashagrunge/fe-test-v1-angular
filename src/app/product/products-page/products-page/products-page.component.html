@@ -1,0 +1,19 @@
+<div class="products-page">
+  
+  <div class="products-page__filters">
+    <app-typeahead-control [label]="'Filter by name or code'" 
+                                (changeEvent)="onFilterNameChange($event)"></app-typeahead-control>
+  </div>
+  
+  <div *ngIf="products$ | async as products; else loading" class="products-page__product-list">
+    <app-product-summary-box *ngFor="let product of products" 
+                             [product]="product"></app-product-summary-box>
+  </div>
+  
+  <ng-template #loading>
+    <!-- Material spinner is not working well on ie11, should create a css loader component instead -->
+    <mat-spinner *ngIf="!isApiError; else error"></mat-spinner>
+    <ng-template #error><app-api-response-message></app-api-response-message></ng-template>
+  </ng-template>
+  
+</div>

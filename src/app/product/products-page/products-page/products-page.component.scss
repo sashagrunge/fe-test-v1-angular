@@ -1,0 +1,38 @@
+@import '~sass/settings';
+
+.products-page {
+  @include with-spinner;
+  &__filters {
+    @include card;
+    @include unit-sizes(margin, -20, auto, 10);
+    background-color: white;
+    display: block;
+    width: 80%;
+    @include breakpoint($tablet) {
+      width: 50%;  
+    }
+  }/* END filters */
+  &__product-list {
+    @include unit-sizes(padding, 15);
+    display: flex;
+    flex-wrap: wrap;
+    app-product-summary-box {
+      @include unit-sizes(padding, 8);
+      width: 100%;
+      flex: 0 1 auto;
+      box-sizing: border-box;
+      @include breakpoint($tablet) {
+        width: 50%;
+        //flex: 0 0 50%;
+      }
+      @include breakpoint($laptop) {
+        width: 33%;
+        //flex: 0 0 33%;
+      }
+      @include breakpoint($desktop) {
+        width: 20%;
+        //flex: 0 0 20%;
+      }
+    }
+  }/* END product-list */
+}

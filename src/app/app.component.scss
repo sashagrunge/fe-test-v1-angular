@@ -1,0 +1,9 @@
+@import '~sass/settings';
+
+.app-header {
+  @include unit-sizes(padding, 20, 0);
+  color: white;
+  background-color: $carolina-blue;
+  background: linear-gradient(45deg, $carolina-blue 0%, 50%, $baby-blue 100%);
+  text-align: center;
+}

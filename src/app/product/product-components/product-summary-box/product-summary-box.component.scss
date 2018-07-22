@@ -1,0 +1,16 @@
+@import '~sass/settings';
+
+.product-summary-box {
+  @include unit-sizes(padding, 15);
+  border: 1px solid $light-steel-blue;
+  border-radius: 6px;
+  &__details-item {
+    @include unit-sizes(margin, 8, 0);
+    display: flex;
+  }
+  &__details-item-title {
+    display: inline-block;
+    width: 30%;
+    flex: 0 0 30%;
+  }
+}

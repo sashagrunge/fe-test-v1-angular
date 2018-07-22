@@ -1,0 +1,10 @@
+<div class="product-summary-box">
+  <h2 class="product-summary-box__headline">{{product.name}}</h2>
+  <div class="product-summary-box__details">
+    <div class="product-summary-box__details-item"
+         *ngFor="let detail of detailsDefinition">
+      <span class="product-summary-box__details-item-title">{{detail.title}}</span>
+      <span class="product-summary-box__details-item-value">{{product[detail.key]}}</span>
+    </div>
+  </div>
+</div>
