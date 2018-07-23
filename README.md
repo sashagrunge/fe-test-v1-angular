@@ -14,7 +14,7 @@ $ npm install
 Start up node server
 
 `
-$ ng serve --proxy-config proxy.conf.json --aot
+$ node ./server/server.js
 `
 
 Run ng serve
